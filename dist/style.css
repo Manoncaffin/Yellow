@@ -125,5 +125,52 @@ body {
     justify-content: center; }
 
 #services {
-  display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  #services > div {
+    display: flex;
+    justify-content: center; }
+    #services > div > article {
+      width: 30%;
+      justify-content: space-between;
+      text-align: center; }
+      #services > div > article p {
+        color: rgba(0, 0, 0, 0.696); }
+      #services > div > article:nth-child(3) {
+        color: orange; }
+      #services > div > article:nth-child(4) {
+        color: orange; }
+      #services > div > article:nth-child(5) {
+        color: orange; }
+  #services h2 {
+    color: rgba(0, 0, 0, 0.696); }
+  #services p {
+    color: rgba(0, 0, 0, 0.696); }
+
+#latest-news {
+  box-sizing: border-box; }
+  #latest-news > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #272929; }
+    #latest-news > div h2 {
+      color: white; }
+    #latest-news > div p {
+      color: white;
+      padding-bottom: 60px;
+      margin-top: 0; }
+    #latest-news > div button {
+      width: 170px;
+      height: 40px;
+      font-family: "poppins";
+      font-size: 16px;
+      background-color: rgba(231, 178, 19, 0.963);
+      color: white;
+      border-radius: 3px;
+      border: none;
+      margin-bottom: 60px; }
+  #latest-news > img {
+    width: 100%; }
