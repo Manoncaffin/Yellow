@@ -392,112 +392,125 @@ body {
 
 }
 
-#contact-us {
-    padding: 30px 20%;
+#contact {
+    @include section-style;
+    padding: 2em 0;
 
     h2 {
-        color: $text-lightgray;
+        @include h2-style;
+        margin-bottom: 2em;
+    }
+
+    svg {
+        height: 1em;
+        fill: lighten($colorsH, 20%);
+    }
+
+    >div {
+        width: 70%;
         display: flex;
         justify-content: center;
-    }
+        margin-bottom: 2.5em;
 
-//     form {
-//         display: flex;
-//         justify-content: space-evenly;
-//         color: $text-lightgray;
-//         gap: 20px;
-//     }
-
-//     .infos {
-//         display: flex;
-//         gap: 40px;
-
-//     }
-
-//     .text,
-//     div {
-//         flex: 1;
-//         margin-bottom: 10px;
-//     }
-
-//     input {
-//         width: 90%;
-//         height: 25px;
-//     }
-
-
-//     .text-orange {
-//         color: $blood-orange;
-//         font-size: 0.8rem;
-//     }
-
-//     .text-gray {
-//         color: $text-lightgray;
-//         font-size: 0.8rem;
-//     }
-
-//     .message-label {
-//         clear: both;
-//         margin-top: 10px;
-//     }
-// }
-
-form {
-
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap:2em;
-    
-
-    >div:first-child{
-        display: flex;
-        justify-content: space-between;
-
-        div{
+        >div {
             display: flex;
-            flex-direction: column;
+
             width: 30%;
-            
+            gap: 2em;
+
+            >p {
+                color: lightgray;
+
+                &:first-child {
+                    color: $yellow;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        height: 90%;
+                        background-color: lightgray;
+                        width: 1px;
+                        position: absolute;
+                        right: -15px;
+                        top: 5px;
+                    }
+                }
+
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &:last-child {
+                display: flex;
+                justify-content: end;
+                gap: 1em;
+            }
+
         }
+
     }
 
-    label{
-        color:lighten($colorsH, 20%);
-    }
-    input{
-        border: lighten($colorsH, 40%) solid 1px;
-        background-color: lighten($colorsH, 65%);
-        height: 2.5em;
-    }
-    >div:nth-child(2){
-        width: 100%;
+    form {
+
+        width: 90%;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        gap: 2em;
 
-        textarea{
-    
+
+        >div:first-child {
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+
+            }
+        }
+
+        label {
+            color: lighten($colorsH, 20%);
+        }
+
+        input {
             border: lighten($colorsH, 40%) solid 1px;
             background-color: lighten($colorsH, 65%);
+            height: 2.5em;
         }
-    }
 
-    >div:last-child{
-        display: flex;
-        justify-content: end;
+        >div:nth-child(2) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
 
-        button{
-            color: $white;
-            font-weight: 600;
-            background-color: $yellow;
-            border:none;
-            padding: 1em 5em;
-            border-radius: 5px;
+            textarea {
+
+                border: lighten($colorsH, 40%) solid 1px;
+                background-color: lighten($colorsH, 65%);
+            }
+        }
+
+        >div:last-child {
+            display: flex;
+            justify-content: end;
+
+            button {
+                color: $white;
+                font-weight: 600;
+                background-color: $yellow;
+                border: none;
+                padding: 1em 5em;
+                border-radius: 5px;
+            }
         }
     }
 }
-
 
 footer {
 
@@ -543,5 +556,4 @@ footer {
             }
         }
     }
-}
 }
